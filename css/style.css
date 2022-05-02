@@ -50,6 +50,7 @@
 body { 
   margin: 0;
   font-family: 'Raleway', sans-serif;
+  font-size:12px
 }
 
 a {
@@ -67,6 +68,7 @@ header {
 }
 
 .header-nav {
+  margin: 0 50px;
   line-height: 100px;
   display: flex;
   justify-content: space-between;
@@ -81,7 +83,7 @@ header {
 }
 
 .header-nav a.logo img {
-  width: 80%;
+  width: 150%;
 }
 
 .header-nav .header-right {
@@ -90,7 +92,7 @@ header {
 }
 
 .header-right a {
-  width: 150px;
+  width: 200px;
   height: 100px;
   text-align: center;
   border: 2px solid transparent;
@@ -108,15 +110,221 @@ header {
 .header-right {
   float: right;
 }
-/*xxx Header xxx*/  
+/*xxx Header xxx*/
+
+
+/*oooo Main oooo*/ 
+main {
+  max-width: 1440px;
+  min-width: 280px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-wrapper {
+  margin: 0 50px;
+}
+/*o title o*/
+main .title {
+    padding: 0; 
+    display: flex;  
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+main .title h1 {
+    margin: 0;
+    font-size: 17px;    
+}
+
+main .title p {
+    margin: 5px 0;
+}
+/*x title x*/
+
+/*o formulaire o*/
+main form.form-search {
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+main form i.fa-map-marker-alt {
+    width: 46px;
+    height: 45px;
+    padding: 15px 17px;
+    background-color: var(--grey);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border: 1px solid var(--grey);
+}
+
+input.p-holder {
+    width: 200px;
+    height: 45px;
+    padding-left: 10px;
+    border-left: 1px solid var(--grey);
+    border-right: 1px solid transparent;
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+}
+
+input.search {
+    height: 45px;
+    color: #FFF;
+    padding: 12px 20px;
+    background-color: var(--blue);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: 1px solid var(--blue);    
+    font-weight: bolder;
+}  
+  
+input::placeholder {
+    color: #000;
+    font-weight: bolder;
+}
+  
+.fa-search {
+    opacity: 0;
+}
+/*x formulaire x*/
+
+/*o filters o*/
+main div.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;   
+    margin: 20px 0; 
+}
+
+main div.filters div.mobile {
+    display: flex;
+    gap: 30px;
+}
+
+.filters p {
+    margin: 0;
+    font-weight: bold;    
+}
+
+.filters span {
+  font-size: 12px;
+    font-weight: bold;    
+    margin: 0 12px;    
+}
+
+.fa-money-bill-wave, 
+.fa-child, 
+.fa-heart, 
+.fa-dog { 
+  width: 34px; 
+  height: 34px;
+  background: white;
+  border-radius: 50%;
+  color: var(--blue);
+  padding: 11px 0;
+  padding-right: 2px;
+}
+
+div.filters button  { 
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #FFF;    
+  border-radius: 50px 50px 50px 50px;
+  border: 2px solid var(--grey);
+}
+
+button i.filter {
+  background: var(--light-blue);
+  color: var(--blue);
+  margin: 0;
+}
+/*x filters x*/
+
+/*o information o*/
+.fa-info {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-top: 1px;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  width: 16px; 
+  height: 16px;
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+  color: var(--blue);
+}
+  
+  main div.information {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+  
+main div.information p {
+    margin-left: 5px;
+}
+/*o information o*/
+
+/*ooo Hebergements and Plus Populaires ooo*/
+.row-1 {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two inequal columns that sits next to each other */
+.column-1 {
+  -ms-flex: 3; /* IE10 */
+  flex: 3;
+  max-width: 3;
+  padding: 0 4px;
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.column-2 {
+  -ms-flex: 1; /* IE10 */
+  flex: 1;
+  max-width: 1;
+  padding: 0 4px;
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/*xxx Hebergements and Plus Populaires xxx*/
+
+/*xxxx Main xxxx*/
 
 /*ooo Responsive layout - 992px ooo*/
-@media all and (max-width: 992px) {}
+@media all and (max-width: 992px) {
+  /*ooo Hebergements and Plus Populaires ooo*/
+  /* Responsive layout - makes a two equal column-layout instead of two inequal columns */
+  .column-1, .column-2 {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+/*xxx Hebergements and Plus Populaires xxx*/
+  
+}
 /*xxx Responsive layout - 992px xxx*/
 
 /*ooo Responsive layout - 768px ooo*/
 @media all and (max-width: 768px) {
-
   /*ooo Header ooo*/
   .header-nav {
     line-height: 50px;
@@ -124,8 +332,13 @@ header {
     flex-direction: column;
   }
 
+  .header-nav a.logo img {
+    margin: 50px 0;
+  }
+  
   .header-right a {
-    height: 40px;
+    height: 50px;
+    border-bottom: 2px solid var(--grey);
   }
 
   .header-right a:hover {
@@ -142,6 +355,70 @@ header {
     float: center;
   }
   /*xxx Header xxx*/
+
+  /*oooo Main oooo*/ 
+ 
+  /*o title o*/     
+  main .title h1 {
+      margin-top: 20px;  
+  }
+/*x title x*/
+
+  /*ooo Form ooo*/
+  main form.form-search {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
   
+  input[value="Rechercher"] { 
+    display:none; 
+  }
+    
+  .fa-search {
+    opacity: 1;
+    width: 45px;
+    height: 45px;
+    padding: 16px;
+    text-align: center;
+    background-color: var(--blue);
+    color: #FFF;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  /*o filters o*/
+  main div.filters {    
+    display: flex;    
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;   
+    margin: 20px 0; 
+  }
+
+  div.filters button  { 
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div.mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  /*x filters x*/
+  /*ooo Hebergements and Plus Populaires ooo*/
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  .column-1, .column-2 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  /*xxx Hebergements and Plus Populaires xxx*/
 }
 /*xxx Responsive layout - 768px xxx*/
