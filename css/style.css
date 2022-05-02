@@ -1,0 +1,147 @@
+/* ----------------- Flexbox memo ---------------- 
+                      display:flex;
+                      justify-content
+                      align-items
+                      flex-direction
+                      order
+                      align-self
+                      flex-wrap
+                      flex-flow
+                      align-content        
+----------x-------- Flexbox memo ---------x------ */
+
+/*oooo Start oooo*/ 
+/*xxxx End xxxx*/
+
+*, *:before, *:after {
+    -moz-box-sizing    : border-box; /* Firefox */
+    -webkit-box-sizing : border-box; /* Safari */
+    box-sizing         : border-box;
+    *behavior          : url(./js/boxsizing.htc); /* ie7 et ie8 */
+}
+
+/*oooo Color Chart oooo*/ 
+:root {
+    --blue: #0065FC;
+    --light-blue: #DEEBFF;
+    --grey: #F2F2F2;
+    --big-font: 30px;
+    --margin-page: 0 5%;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.blue {
+    color: #0065FC;
+}
+
+.light-blue {
+    color: #DEEBFF
+}
+
+.grey {
+    color: #F2F2F2; 
+}
+/*xxxx Color Chart xxxx*/
+
+/*ooo Global Classes ooo*/
+body { 
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+/*ooo Global Classes ooo*/
+
+/*ooo Header ooo*/
+header {
+  max-width: 1440px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header-nav {
+  line-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.header-nav a.logo {
+  width: 100px;
+  display: flex;  
+  align-items: center;
+}
+
+.header-nav a.logo img {
+  width: 80%;
+}
+
+.header-nav .header-right {
+  display: flex;  
+  align-items: center; 
+}
+
+.header-right a {
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.header-right a:hover {
+  color: var(--blue);
+  border-top: 2px solid var(--blue);
+}
+
+.header-right a:active {
+  border-top: 2px solid var(--blue);
+}
+
+.header-right {
+  float: right;
+}
+/*xxx Header xxx*/  
+
+/*ooo Responsive layout - 992px ooo*/
+@media all and (max-width: 992px) {}
+/*xxx Responsive layout - 992px xxx*/
+
+/*ooo Responsive layout - 768px ooo*/
+@media all and (max-width: 768px) {
+
+  /*ooo Header ooo*/
+  .header-nav {
+    line-height: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-right a {
+    height: 40px;
+  }
+
+  .header-right a:hover {
+    border: 2px solid transparent;
+    border-bottom: 2px solid var(--blue);
+  }
+  
+  .header-right a:active {
+    border: 2px solid transparent;
+    border-bottom: 2px solid var(--blue);
+  }
+  
+  .header-right {
+    float: center;
+  }
+  /*xxx Header xxx*/
+  
+}
+/*xxx Responsive layout - 768px xxx*/
