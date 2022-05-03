@@ -293,6 +293,7 @@ main div.information p {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  background-color: var(--grey;)
 }
 
 .column-2 {
@@ -303,6 +304,7 @@ main div.information p {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  background-color: var(--grey;)
 }
 
 /*xxx Hebergements and Plus Populaires xxx*/
