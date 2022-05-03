@@ -401,9 +401,9 @@ main div.information p {
   /*ooo Hebergements and Plus Populaires ooo*/
   /* Responsive layout - makes a two equal column-layout instead of two inequal columns */
   .column-1, .column-2 {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
   }
 /*xxx Hebergements and Plus Populaires xxx*/
   
