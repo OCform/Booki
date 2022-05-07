@@ -368,8 +368,8 @@ main div.information p {
 
   div.mobile {
     display: flex;
-    flex-direction: column;
-  }
+    flex-flow: row wrap;
+    }
   /*x filters x*/
   /*ooo Hebergements and Plus Populaires ooo*/
   
